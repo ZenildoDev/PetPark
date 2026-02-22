@@ -1,0 +1,75 @@
+.servicos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-xxxl);
+    padding: var(--padding-5xl);
+}
+
+.servicos-titulo{
+    color: var(--cor-primaria-ligth);
+}
+
+.servicos-lista{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--gap-m);
+}
+
+.servicos-lista>li>.link{
+    position: relative;
+    background-color: var(--cor-secundaria-ligth);
+    text-decoration: none;
+    border-radius: 1rem;
+    padding: var(--padding-m) var(--padding-l);
+    font-family: var(--font-sigmar);
+    font-size: var(--font-size-m);
+    color: var(--cor-primaria-ligth);
+}
+
+.link::before{
+    content: "";
+    position: absolute;
+    left: -10px; /*Começa 10px fora do lado esquerdo */
+    bottom: 50%; /* Posiciona baseado na metade inferior do botão */
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(0); /* elemento estável sem aparecer */
+    transition: transform 0.3s ease, left 0.3s ease;
+}
+
+.banho-e-tosa>.link::before {
+    background-image: url("../assets/icones/banho-e-tosa.png");
+}
+
+.hospedagem>.link::before{
+    background-image: url("../assets/icones/hospedagem.png");
+}
+
+.veterinario>.link::before{
+    background-image: url("../assets/icones/veterinario.png");
+}
+
+.adestramento>.link::before{
+    background-image: url("../assets/icones/adestramento.png");
+}
+
+.petsiter>.link::before{
+    background-image: url("../assets/icones/petsiter.png");
+}
+
+.servicos-lista>li>.link:hover{
+    transform: scale(1.05); /* Aumenta levemente o tamanho do botão */
+    transition: transform 0.3s ease-in; /* Anima o crescimento */
+    padding-left: var(--padding-5xl); /* Aumenta espaço à esquerda para abrir espaço para o ícone */
+}
+
+.link:hover::before{
+    transform: scale(1) translateY(50%); /* Faz o ícone aparecer e mover verticalmente */
+    left: 0.5rem; /* Move o ícone para dentro do botão*/
+}

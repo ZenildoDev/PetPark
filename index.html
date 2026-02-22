@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./estilos.css">
     <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./estilos.css">
     <title>PetPark</title>
 </head>
 <body>
@@ -51,14 +51,14 @@
                 <img src="./assets/imagens/banner.png" alt="Imagem de dois pets, um gato cinza listrado e um cão husky nas cores branco e caramelo">
             </div>
         </section>
-        <section class="serviços">
+        <section class="servicos">
             <h2 class="servicos-titulo">Nossos serviços</h2>
             <ul class="servicos-lista">
                 <li class="banho-e-tosa"><a class="link" href="#">Banho e Tosa</a></li>
                 <li class="hospedagem"><a class="link" href="#">Hospedagem</a></li>
                 <li class="veterinario"><a class="link" href="#">Veterinario</a></li>
                 <li class="adestramento"><a class="link" href="#">Adestramento</a></li>
-                <li class="petsister"><a class="link" href="#">Petsiter</a></li>
+                <li class="petsiter"><a class="link" href="#">Petsiter</a></li>
             </ul>
         </section>
         <section class="planos">
@@ -73,7 +73,7 @@
                             essencial para o bem-estar do seu pet! Não inclui coleta.
                         </p>
                         <span>R$80,00</span>
-                        <buttun class="botao-compra">Assinar Plano</buttun>
+                        <button class="botao-compra">Assinar Plano</buttun>
                     </div>
                     <div class="cartao">
                         <img src="./assets/imagens/amiguinho.png" alt="Gato cinza">
@@ -85,7 +85,7 @@
                         <span>R$120,00</span>
                         <button class="botao-compra">Assinar Plano</button>
                     </div>
-                    <div>
+                    <div class="cartao">
                         <img class="planos-imagens" src="./assets/imagens/pata-de-ouro.png" alt="Cachorro com uma argola roxa na boca"/>
                         <h3>Pata de Ouro</h3>
                         <p>
@@ -126,11 +126,11 @@
                         <p class="carrossel-descricao">Redondo com pluma e mola rosa</p>
                         <span class="carrossel-preco">R$59,90</span>
                     </li>
-                    <div class="carrossel-button">
-                        <button class="carrossel-nav">←</button>
-                        <button class="carrossel-nav">→</button>
-                    </div>
                 </ul>
+                <div class="carrossel-button">
+                    <button class="carrossel-nav">←</button>
+                    <button class="carrossel-nav">→</button>
+                </div>
             </div>
         </section>
         <section class="parceiros">
@@ -160,7 +160,7 @@
                         id="email"
                         class="formulario-input"
                         placeholder="Insira seu melhor email"
-                        riquired
+                        required
                     />
                 </label>
                 <div class="grupo-opcoes">
@@ -174,16 +174,16 @@
                         <span></span>
                     </label>
                     <label for="roedor" class="opcao">
-                        <input type="checkbox" id="roedor" nome="pet" value="roedor"/>
+                        <input type="checkbox" id="roedor" name="pet" value="roedor"/>
                         <span></span> Roedor
                     </label>
                     <label for="outros" class="opcao">
-                        <input type="checkbox" id="outros" nome="pet" value="outros"> 
+                        <input type="checkbox" id="outros" name="pet" value="outros"> 
                         <span></span> outros
                     </label>
                 </div>
             </form>
-            <button type="submit" class="botao-enviar">Inscrever</button>
+                <button type="submit" class="botao-enviar">Inscrever</button>
         </section>
     </main>
     <footer class="rodape">
