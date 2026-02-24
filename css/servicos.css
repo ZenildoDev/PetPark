@@ -8,7 +8,7 @@
 }
 
 .servicos-titulo{
-    color: var(--cor-primaria-ligth);
+    color: var(--cor-primaria-light);
 }
 
 .servicos-lista{
@@ -21,13 +21,13 @@
 
 .servicos-lista>li>.link{
     position: relative;
-    background-color: var(--cor-secundaria-ligth);
+    background-color: var(--cor-secundaria-light);
     text-decoration: none;
     border-radius: 1rem;
     padding: var(--padding-m) var(--padding-l);
     font-family: var(--font-sigmar);
     font-size: var(--font-size-m);
-    color: var(--cor-primaria-ligth);
+    color: var(--cor-primaria-light);
 }
 
 .link::before{

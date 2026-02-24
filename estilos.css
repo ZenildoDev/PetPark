@@ -2,6 +2,9 @@
 @import url("./css/destaque.css");
 @import url("./css/servicos.css");
 @import url("./css/planos.css");
+@import url("./css/ofertas.css");
+@import url("./css/parceiros.css");
+@import url("./css/newsletter.css");
 
 :root{
     --cor-primaria-dark: #c13724;
@@ -14,6 +17,9 @@
     --cor-neutra-dark: #444444;
     --cor-neutra-medio: #b9b9b9;
     --cor-neutra-light: #ffffff;
+
+    --cor-primaria-box-shadow: rgba(193, 55, 36, 0.4);
+    --cor-secundaria-box-shadow: rgba(162, 183, 43, 0.4);
 
  
     --font-sigmar: "Sigmar", sans-serif;
@@ -83,8 +89,8 @@ body{
     height: 100%;
     box-sizing: border-box;
     background-color: var(--cor-neutra-light);
-}
 
- .container {
+    .container {
         width: 1200px;
+    }
 }

@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: center;
     padding: var(--padding-5xl);
-
 }
 
 .planos-background {
@@ -34,19 +33,19 @@
     gap: var(--gap-m);
     background-color: var(--cor-neutra-light);
     padding: var(--padding-m);
-    flex-grow: 1;
     border-radius: 1rem;
+    flex-grow: 1;
 }
 
-.cartao > h3 {
+.cartao>h3 {
     font-size: var(--font-size-l);
 }
 
-.cartao > p {
+.cartao>p {
     text-align: center;
 }
 
-.cartao > span {
+.cartao>span {
     font-size: var(--font-size-xl);
     font-family: var(--font-sigmar);
     color: var(--cor-primaria-light);

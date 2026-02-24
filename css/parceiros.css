@@ -1,0 +1,45 @@
+.parceiros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-m);
+    width: 100%;
+    padding: var(--padding-xxl) 0;
+    background-color: var(--cor-neutro-light);
+}
+
+.parceiros-titulo {
+    color: var(--cor-primaria-light);
+    margin-bottom: 1.25rem;
+}
+
+.lista-parceiros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap-xxxl);
+}
+
+.lista-parceiros > div {
+    flex: 1 0 100px;
+    width: 100%;
+}
+
+.lista-parceiros>div>img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: tranform 0.3s ease;
+}
+
+.lista-parceiros>div:nth-child(odd):hover img{   /* odd são para os impares */
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--cor-primaria-box-shadow);
+}
+
+.lista-parceiros>div:nth-child(even):hover img{ /* even são para os pares */
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--cor-secundaria-box-shadow);
+}
