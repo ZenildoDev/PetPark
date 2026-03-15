@@ -19,6 +19,10 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--gap-xxxl);
+
+    @media (max-width: 768px) {
+        gap: var(--gap-xxl);
+    }
 }
 
 .lista-parceiros > div {
@@ -42,4 +46,15 @@
 .lista-parceiros>div:nth-child(even):hover img{ /* even são para os pares */
     transform: scale(1.1);
     box-shadow: 0 0 20px var(--cor-secundaria-box-shadow);
+}
+
+@media screen and (max-width: 430px) {
+    .parceiros-titulo{
+        font-size: var(--font-size-xl);
+    }
+    
+    .lista-parceiros{
+        gap: var(--gap-m);
+        max-width: 65%;
+    }
 }

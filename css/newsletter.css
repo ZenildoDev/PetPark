@@ -67,7 +67,7 @@
 
 }
 
-.opcao input[type="checkbox"] {
+.opcao input[type="checkbox"] {  /* apaga o checkbox original apara o editado aparecer */
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -85,4 +85,14 @@
 
 .opcao input[type="checkbox"]:checked + span {
     background-color: var(--cor-primaria-light);
+}
+
+@media screen and (max-width: 430px) {
+    .newsletter{
+        text-align: center;
+        gap: var(--gap-xl);
+    }
+    .grupo-opcoes{
+        max-width: 85%;
+    }
 }

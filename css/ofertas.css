@@ -1,4 +1,4 @@
-.ofertas {
+.ofertas{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,29 +12,6 @@
 .ofertas-titulo {
     color: var(--cor-primaria-light);
 }
-.containe {
-    max-width: 500px;
-    min-width: 350px;
-}
-
-.carrossel {
-    display: flex;
-    gap: var(--gap-l);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-}
-
-.carrossel-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: var(--padding-m) var(--padding-s);
-    background-color: var(--cor-neutra-light);
-    border-radius: 1rem;
-    text-align: center;
-    gap: var(--gap-m);
-    scroll-snap-align: center;
-}
 
 .carrossel-nome,
 .carrossel-preco {
@@ -43,19 +20,53 @@
     font-weight: 600;
 }
 
-.carrossel-nav {
-    border: none;
-    border-radius: 50%;
-    padding: var(--padding-m);
-    background-color: var(--cor-primaria-light);
-    color: var(--cor-neutra-light);
+.containercarro {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.carrossel {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 24px;
+  will-change: transform;
+}
+
+.carrossel-item {
+  flex: 0 0 300px;
+  text-align: center;
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: all 0.4s ease;
+}
+
+.carrossel-item.ativo {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .carrossel-button {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 45%;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.carrossel-nav {
+  cursor: pointer;
+  background-color: var(--cor-primaria-light);
+  color: var(--cor-neutra-light);
+  border: none;
+  border-radius: 50%;
+  padding: 1rem 1.2rem;
+  font-size: 1.2rem;
+  z-index: 20;
 }

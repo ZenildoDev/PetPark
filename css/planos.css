@@ -18,12 +18,21 @@
 
 .planos-titulo {
     color: var(--cor-secundaria-light);
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 }
 
 .lista-planos {
     display: flex;
     justify-content: space-between;
     gap: var(--gap-xl);
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .cartao {
@@ -35,6 +44,10 @@
     padding: var(--padding-m);
     border-radius: 1rem;
     flex-grow: 1;
+
+    @media (max-width: 768px) {
+        width: 50%;
+    }
 }
 
 .cartao>h3 {
@@ -57,4 +70,29 @@
     padding: var(--padding-s) var(--padding-l);
     border-radius: 2rem;
     color: var(--cor-neutra-light);
+}
+
+@media screen and (max-width: 430px) {
+    .planos-background{
+        padding: var(--padding-xl) var(--padding-s);
+    }
+
+    .planos-titulo{
+        font-size: var(--font-size-l);
+        margin-top: 25px;
+        padding: 15px;
+    }
+
+    .cartao{
+        width: 85%;
+    }
+
+    .cartao p{
+        font-size: var(--font-size-b);
+    }
+
+    .botao-compra{
+        padding: var(--padding-m) var(--padding-xl);
+        font-size: var(--font-size-m);
+    }
 }

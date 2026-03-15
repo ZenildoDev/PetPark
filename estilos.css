@@ -5,6 +5,7 @@
 @import url("./css/ofertas.css");
 @import url("./css/parceiros.css");
 @import url("./css/newsletter.css");
+@import url("./css/rodape.css");
 
 :root{
     --cor-primaria-dark: #c13724;
@@ -89,8 +90,17 @@ body{
     height: 100%;
     box-sizing: border-box;
     background-color: var(--cor-neutra-light);
+}
 
-    .container {
-        width: 1200px;
+.container {
+
+    width: 1200px;
+
+    @media (max-width: 768px) {
+        width: 500px;
+    }
+
+    @media (max-width: 430px) {
+        width: 350px;
     }
 }

@@ -17,6 +17,11 @@
     align-items: center;
     flex-wrap: wrap;
     gap: var(--gap-m);
+
+    @media (max-width: 768px) {
+        height: 300px;
+        justify-content: space-around;
+    }
 }
 
 .servicos-lista>li>.link{
@@ -72,4 +77,18 @@
 .link:hover::before{
     transform: scale(1) translateY(50%); /* Faz o ícone aparecer e mover verticalmente */
     left: 0.5rem; /* Move o ícone para dentro do botão*/
+}
+
+@media screen and (max-width: 430px) {
+    .servicos{
+        padding: var(--padding-3xl);
+    }
+
+    .servicos-titulo{
+        font-size: var(--font-size-l);
+    }
+
+    .servicos-lista{
+        gap: var(--gap-xxl);
+    }
 }

@@ -18,7 +18,18 @@
 <body>
     <header class="cabecalho">
         <div class="alinhamento-cabecalho container">
-            <img src="./assets/logo.png" alt="Logotipo do PetPark"/>
+            <input type="checkbox" id="menu" class="container__botao">
+            <label for="menu" class="container__rotulo">
+                <span class="cabecalho__menu-hamburguer"></span>
+            </label>
+            <ul class="menu-lista__hamburguer">
+                <li class="menu-item__hamburguer"><a class="menu-link" href="#">Raças</a></li>
+                <li class="menu-item__hamburguer"><a class="menu-link" href="#">Planos Pet</a></li>
+                <li class="menu-item__hamburguer"><a class="menu-link" href="#">Serviços</a></li>
+                <li class="menu-item__hamburguer"><a class="menu-link" href="#">Sobre nós</a></li>
+                <li class="menu-item__hamburguer"><a class="menu-link" href="#">Clube de desconto</a></li>
+            </ul>
+            <img class="imagem__petpark" src="./assets/logo.png" alt="Logotipo do PetPark"/>
             <label class="label-busca" for="campo-busca">
                 <input
                     class="input-busca"
@@ -31,7 +42,7 @@
                 </div>
             </label>
             <button class="botao-login">
-                <img class="icone-login" src="./assets/icones/login.png" alt="ícone de login" /> Login/Cadastro
+                Login/Cadastro <img class="icone-login" src="./assets/icones/login.png" alt="ícone de login" />
             </button>
         </div>
         <nav class="navegacao container">
@@ -48,7 +59,7 @@
         <section class="destaque">
             <div class="banner container">
                 <h1 class="destaque-titulo">Seu melhor amigo,<span>nosso maior cuidado!</span></h1>
-                <img src="./assets/imagens/banner.png" alt="Imagem de dois pets, um gato cinza listrado e um cão husky nas cores branco e caramelo">
+                <img src="./assets/imagens/banner.png" alt="Imagem de dois pets, um gato cinza listrado e um cão husky nas cores branco e caramelo" class="imagem__dog">
             </div>
         </section>
         <section class="servicos">
@@ -99,36 +110,52 @@
             </div>
         </section>
         <section class="ofertas">
-            <h2 class="ofertas-titulo">Super Ofertas</h2>
-            <div class="containe">
+            <h2 class="ofertas-titulo">Super ofertas:</h2>
+
+            <div class="containercarro">
+
+                <!-- Botões -->
+                <div class="carrossel-button">
+                    <button class="carrossel-nav prev">←</button>
+                    <button class="carrossel-nav next">→</button>
+                </div>
+
+                <!-- Lista -->
                 <ul class="carrossel">
                     <li class="carrossel-item">
-                        <img class="carrossel-imagem" src="./assets/imagens/biskrock.png" alt="Biscoito pedigree Biskrock"/>
-                        <h3 class="carrossel-nome">Biscoito Pedigree Biskrock</h3>
+                        <img class="carrossel-imagem" src="./assets/imagens/biskrock.png" alt="Biscoito Pedigree Biscrok" />
+                        <h3 class="carrossel-nome">Biscoito Pedigree Biscrok</h3>
                         <p class="carrossel-descricao">Multi para Cães Adultos 500g</p>
-                        <span class="carrossel-preco">R$19,99</span>
+                        <span class="carrossel-preco">R$ 19,99</span>
                     </li>
+
                     <li class="carrossel-item">
-                        <img class="carrossel-imagem" src="./assets/imagens/golden-especial.png" alt="Ração Golden essencial"/>
-                        <h3 class="carrossel-nome">Ração Golden Especial</h3>
-                        <p class="carrossel-descricao">Cães Adultos Sabor Frango e Carne 15kg</p>
-                        <span class="carrossel-preco">R$149,00</span>
+                        <img class="carrossel-imagem" src="./assets/imagens/golden-especial.png" alt="Ração Golden Special" />
+                        <h3 class="carrossel-nome">Ração Golden Special</h3>
+                        <p class="carrossel-descricao">
+                            Cães Adultos Sabor Frango e Carne 15kg
+                        </p>
+                        <span class="carrossel-preco">R$ 149,00</span>
                     </li>
+
                     <li class="carrossel-item">
-                        <img class="carrossel-imagem" src="./assets/imagens/pipicat.png" alt="Areia Higiênica Pipicat"/>
+                        <img class="carrossel-imagem" src="./assets/imagens/pipicat.png" alt="Areia Higiênica Pipicat" />
                         <h3 class="carrossel-nome">Areia Higiênica Pipicat</h3>
-                        <p class="carrossel-descricao">Classic para Gatos 4kg</p>
-                        <span class="carrossel-preco">R$45,00</span>
+                        <p class="carrossel-descricao">Classic para Gatos 4 Kg</p>
+                        <span class="carrossel-preco">R$ 45,00</span>
                     </li>
+
                     <li class="carrossel-item">
-                        <img class="carrossel-imagem" src="./assets/imagens/arranhador.png" alt="Arranhador São Benedito Pet"/>
+                        <img class="carrossel-imagem" src="./assets/imagens/arranhador.png" alt="Arranhador São Benedito Pet" />
                         <h3 class="carrossel-nome">Arranhador São Benedito Pet</h3>
                         <p class="carrossel-descricao">Redondo com pluma e mola rosa</p>
-                        <span class="carrossel-preco">R$59,90</span>
+                        <span class="carrossel-preco">R$ 59,90</span>
                     </li>
                 </ul>
+
             </div>
         </section>
+        <script src="./scripts/carrossel.js"></script>
         <section class="parceiros">
             <h2 class="parceiros-titulo">Marcas parceiras</h2>
             <div class="lista-parceiros container">
@@ -183,16 +210,16 @@
         </section>
     </main>
     <footer class="rodape">
-        <div class="icone-rodape">
-            <p class="body-regular">Acesse nossas redes</p>
-            <div>
-                <img class="icone-rodape" src="./assets/icones/whatsapp.png" alt="whatsapp"/>
-                <img class="icone-rodape" src="./assets/icones/instragam.png" alt="instragam"/>
-                <img class="icone-rodape" src="./assets/icones/tiktok.png" alt="tiktok"/>
+        <div class="rodape-bg container">
+            <div class="icones-rodape">
+                <p class="body-regular">Acesse nossas redes</p>
+                <div>
+                    <img class="icone-rodape" src="./assets/icones/whatsapp.png" alt="whatsapp"/>
+                    <img class="icone-rodape" src="./assets/icones/instragam.png" alt="instragam"/>
+                    <img class="icone-rodape" src="./assets/icones/tiktok.png" alt="tiktok"/>
+                </div>
             </div>
-        </div>
-        <div>
-            <p>Desenvolvido por Alura em parceria com o desenvolvedor Zenildo</p>
+            <span>Site de autoria da Alura e construído pelo desenvolvedor Zenildo</span>
         </div>
     </footer>
 </body>
